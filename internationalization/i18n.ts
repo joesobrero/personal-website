@@ -1,14 +1,14 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { en_US } from './locales/en/en_US';
-import { fr_FR } from './locales/fr/fr_FR';
+import { es_ES } from './locales/es/es_ES';
 
 const resources = {
   us: {
     translation: en_US,
   },
-  fr: {
-    translation: fr_FR,
+  es: {
+    translation: es_ES,
   },
 };
 

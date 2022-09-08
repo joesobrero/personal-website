@@ -40,27 +40,27 @@ const PageLayout = ({ title, description, children }: PageProps) => {
         description={description}
         twitter={{
           cardType: 'summary_large_image',
-          handle: '@hakkaofdev',
+          handle: '',
         }}
         openGraph={{
-          url: 'https://www.hakkaofdev.fr',
-          title: title + ' | Starter Kit',
+          url: 'https://www.joesobrero.com',
+          title: title + ' | Joe Sobrero',
           description: description,
           locale: 'en_US',
           images: [
             {
-              url: 'https://www.hakkaofdev.fr/assets/images/social.png',
+              url: 'https://res.cloudinary.com/dl7p14ddo/image/upload/v1662594600/personal-website/og/og-preview_vbhcvc.jpg',
               width: 1200,
               height: 630,
-              alt: 'Alexandre Gossard',
-              type: 'image/png',
+              alt: 'Joe Sobrero',
+              type: 'image/jpg',
             },
           ],
         }}
         additionalLinkTags={[
           {
             rel: 'icon',
-            href: 'https://www.hakkaofdev.fr/favicon.ico',
+            href: 'https://www.joesobrero.com/favicon.ico',
           },
         ]}
       />

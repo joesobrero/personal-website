@@ -25,7 +25,7 @@ const colors = {
 };
 
 const fonts = {
-  heading: `Josefin Sans, ${base.fonts.heading}`,
+  heading: `Work Sans, ${base.fonts.heading}`,
 };
 
 const components = {
