@@ -1,21 +1,6 @@
-import ExternalLink from '@/components/external-link';
 import PageLayout from '@/components/page-layout';
-import {
-  Button,
-  Center,
-  Divider,
-  Heading,
-  HStack,
-  Image,
-  Link,
-  Skeleton,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Divider, Heading, Stack, Text, VStack } from '@chakra-ui/react';
 import { Trans, useTranslation } from 'react-i18next';
-import { FiExternalLink } from 'react-icons/fi';
-import { ImSphere } from 'react-icons/im';
 import { GITHUB_PROFILE } from 'src/constants';
 
 const IndexPage = () => {
@@ -23,8 +8,8 @@ const IndexPage = () => {
 
   return (
     <PageLayout
-      title='Home'
-      description='Discover a starter kit which includes Next.js, Chakra-UI, Framer-Motion in Typescript. You have few components, Internationalization, SEO and more in this template ! Enjoy coding.'
+      title='Joe Sobrero Portfolio'
+      description='Showcase of product design and web development experience.'
     >
       <Stack
         spacing={4}

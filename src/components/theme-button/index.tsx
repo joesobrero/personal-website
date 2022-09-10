@@ -52,7 +52,10 @@ const ThemeButton = () => {
         initial='initial'
         animate='enter'
         exit='exit'
-        colorScheme={mode('purple', 'orange')}
+        variant='ghost'
+        outline={mode('1px solid black', '1px solid white')}
+        borderRadius={0}
+        color={mode('black', 'white')}
         icon={mode(<BsMoon />, <WiDaySunny />)}
         variants={variants}
         onClick={toggleColorMode}
