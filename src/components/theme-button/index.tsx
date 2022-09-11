@@ -12,6 +12,7 @@ const variants: Variants = {
   initial: {
     opacity: 0,
     scale: 0.2,
+    marginInlineStart: 0,
     transition: {
       type: 'tween',
       duration: 0.15,
@@ -21,6 +22,7 @@ const variants: Variants = {
   enter: {
     opacity: 1,
     scale: 1,
+    marginInlineStart: 0,
     transition: {
       type: 'tween',
       duration: 0.15,
@@ -30,6 +32,7 @@ const variants: Variants = {
   exit: {
     opacity: 0,
     scale: 1.8,
+    marginInlineStart: 0,
     transition: {
       type: 'tween',
       duration: 0.15,

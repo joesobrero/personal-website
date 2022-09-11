@@ -1,11 +1,17 @@
 import {
   HStack,
+  Link,
   IconButton,
   Text,
   useColorModeValue as mode,
 } from '@chakra-ui/react';
 import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
-import { FRAME_SIZE } from 'src/constants';
+import {
+  FRAME_SIZE,
+  GITHUB_PROFILE,
+  INSTAGRAM_PROFILE,
+  LINKEDIN_PROFILE,
+} from 'src/constants';
 
 const iconButtonStyle = {
   color: 'white',
@@ -16,6 +22,12 @@ const iconButtonStyle = {
   borderRadius: '0',
   _hover: { bgColor: 'whiteAlpha.100' },
 };
+
+const buttons = [
+  { title: 'instagram', href: INSTAGRAM_PROFILE, icon: <BsInstagram /> },
+  { title: 'linkedin', href: LINKEDIN_PROFILE, icon: <BsLinkedin /> },
+  { title: 'github', href: GITHUB_PROFILE, icon: <BsGithub /> },
+];
 
 const Footer = () => (
   <HStack
@@ -35,22 +47,16 @@ const Footer = () => (
       bgColor='brand.primary'
       border={mode('1px solid black', '1px solid white')}
     >
-      <IconButton
-        sx={iconButtonStyle}
-        aria-label={'view instagram'}
-        icon={<BsInstagram />}
-      />
-      <IconButton
-        sx={iconButtonStyle}
-        aria-label={'view linkedin'}
-        icon={<BsLinkedin />}
-      />
-      <IconButton
-        sx={iconButtonStyle}
-        variant='ghost'
-        aria-label={'view github'}
-        icon={<BsGithub />}
-      />
+      {buttons.map((button) => (
+        <IconButton
+          as={Link}
+          target='_blank'
+          sx={iconButtonStyle}
+          aria-label={'view ' + button.title}
+          href={button.href}
+          icon={button.icon}
+        />
+      ))}
     </HStack>
   </HStack>
 );
