@@ -49,6 +49,7 @@ const Footer = () => (
     >
       {buttons.map((button) => (
         <IconButton
+          key={button.title}
           as={Link}
           target='_blank'
           sx={iconButtonStyle}

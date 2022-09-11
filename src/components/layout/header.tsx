@@ -47,6 +47,7 @@ const Header = () => (
         <HStack spacing={0}>
           {buttons.map((button) => (
             <Button
+              key={button}
               sx={buttonStyles}
               as={Link}
               px={1}
