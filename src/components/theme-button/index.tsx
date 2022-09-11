@@ -60,6 +60,7 @@ const ThemeButton = () => {
         icon={mode(<BsMoon />, <WiDaySunny />)}
         variants={variants}
         onClick={toggleColorMode}
+        marginInlineStart={0}
       />
     </AnimatePresence>
   );

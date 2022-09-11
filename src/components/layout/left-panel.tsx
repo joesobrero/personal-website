@@ -24,7 +24,7 @@ const LeftPanel = () => (
         fontSize='sm'
         opacity={0.5}
       >
-        product strategist, experience designer, web developer
+        product strategist • experience designer • web developer
       </Text>
     </VStack>
   </VStack>

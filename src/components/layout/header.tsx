@@ -1,13 +1,23 @@
 import ThemeButton from '@/components/theme-button';
 import {
   Image,
-  Text,
   HStack,
   VStack,
   useColorModeValue as mode,
   Link,
+  Button,
 } from '@chakra-ui/react';
 import { FRAME_SIZE, LOGO_IMG } from 'src/constants';
+
+const buttonStyles = {
+  h: `calc(${FRAME_SIZE} - 2px)`,
+  px: 4,
+  borderRadius: 0,
+  bgColor: 'transparent',
+  textTransform: 'lowercase',
+};
+
+const buttons = ['design', 'art', 'photography', 'contact'];
 
 const Header = () => (
   <VStack>
@@ -27,12 +37,31 @@ const Header = () => (
     >
       <Link href='/'>
         <Image
+          ml={1}
           h={FRAME_SIZE}
           src={mode(LOGO_IMG.lightModeSrc, LOGO_IMG.darkModeSrc)}
           alt='Joe Sobrero logo'
         />
       </Link>
-      <ThemeButton />
+      <HStack>
+        <HStack spacing={0}>
+          {buttons.map((button) => (
+            <Button
+              sx={buttonStyles}
+              as={Link}
+              px={1}
+              href={'/' + button}
+              _hover={{
+                bgColor: mode('blackAlpha.100', 'whiteAlpha.100'),
+                textDecoration: 'none',
+              }}
+            >
+              {button}
+            </Button>
+          ))}
+        </HStack>
+        <ThemeButton />
+      </HStack>
     </HStack>
   </VStack>
 );

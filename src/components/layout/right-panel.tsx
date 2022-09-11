@@ -4,10 +4,10 @@ import { FRAME_SIZE } from 'src/constants';
 const RightPanel = () => (
   <VStack
     position='fixed'
-    top={`calc(${FRAME_SIZE} - 1px)`}
+    top={0}
     right={0}
     w={FRAME_SIZE}
-    h={`calc(100vh - ${FRAME_SIZE} + 1px)`}
+    h={'100vh'}
     border={mode('1px solid black', '1px solid white')}
     justify='end'
   />

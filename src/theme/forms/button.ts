@@ -129,7 +129,7 @@ export const Button = {
     ghost: (props) => ({
       transition: transition,
       bg: 'transparent',
-      color: mode('purple.600', 'purple.400'),
+      color: mode('black.100', 'purple.400'),
       _hover: {
         bg: 'purpleAlpha.100',
       },
