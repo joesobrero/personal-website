@@ -1,7 +1,5 @@
-export type TypeExample = {
-  id: string;
-  name: string;
-  description: string;
-  createdAt: Date;
-  updatedAt: Date;
+export type Image = {
+  lightModeSrc: string;
+  darkModeSrc: string;
+  alt: string;
 };

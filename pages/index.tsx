@@ -25,10 +25,10 @@ const IndexPage = () => {
           w={{ base: '100%', md: '50%' }}
           py={{ base: 20, md: 0 }}
         >
-          <Heading as='h1'>Joe Sobrero</Heading>
+          <Heading as='h1'>WEBSITE UNDER CONSTRUCTION</Heading>
           <Divider />
           <Text color='gray.500' align='justify'>
-            <Trans i18nKey='bio'></Trans>
+            Check back soon :)
           </Text>
         </VStack>
       </Stack>

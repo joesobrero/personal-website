@@ -10,3 +10,5 @@ export const LOGO_IMG = {
   darkModeSrc: getCloudImgPath('logo-white_xvadpz.svg'),
   alt: 'Joe Sobrero personal logo',
 };
+
+export const FRAME_SIZE = '3rem';

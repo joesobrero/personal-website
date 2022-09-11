@@ -53,7 +53,8 @@ const ThemeButton = () => {
         animate='enter'
         exit='exit'
         variant='ghost'
-        outline={mode('1px solid black', '1px solid white')}
+        border={mode('1px solid black', '1px solid white')}
+        right='-1px'
         borderRadius={0}
         color={mode('black', 'white')}
         icon={mode(<BsMoon />, <WiDaySunny />)}
