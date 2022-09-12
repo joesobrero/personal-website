@@ -17,7 +17,7 @@ const LeftPanel = () => (
       w={FRAME_SIZE}
     >
       <Text
-        sx={{ 'writing-mode': 'vertical-lr' }}
+        sx={{ writingMode: 'vertical-lr' }}
         fontWeight='light'
         textTransform='uppercase'
         letterSpacing='2px'

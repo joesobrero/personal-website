@@ -1,4 +1,4 @@
-const getCloudImgPath = (file: string) =>
+export const getCloudImgPath = (file: string) =>
   'https://res.cloudinary.com/dl7p14ddo/image/upload/v1662775062/personal-website/' +
   file;
 
@@ -12,3 +12,8 @@ export const LOGO_IMG = {
 };
 
 export const FRAME_SIZE = '3rem';
+
+export const PORTRAIT = {
+  src: getCloudImgPath('portrait_kqg3mu.png'),
+  alt: 'Joseph Sobrero black and white portrait',
+};

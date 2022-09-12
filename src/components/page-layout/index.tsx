@@ -67,13 +67,13 @@ const PageLayout = ({ title, description, children }: PageProps) => {
       <MotionContainer
         display='flex'
         maxW='container.lg'
-        minH={{ base: 'auto', md: '100vh' }}
-        px={{ base: 4, lg: 8 }}
+        minH='100vh'
+        p={0}
+        m={0}
         initial='hidden'
         animate='enter'
         exit='exit'
         variants={variants}
-        centerContent
       >
         {children}
       </MotionContainer>

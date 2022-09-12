@@ -1,39 +1,33 @@
+import Education from '@/components/home/education';
+import Intro from '@/components/home/intro';
+import Portrait from '@/components/home/portrait';
+import Tools from '@/components/home/tools';
 import PageLayout from '@/components/page-layout';
-import { Divider, Heading, Stack, Text, VStack } from '@chakra-ui/react';
-import { Trans, useTranslation } from 'react-i18next';
-import { GITHUB_PROFILE } from 'src/constants';
+import {
+  VStack,
+  useColorModeValue as mode,
+} from '@chakra-ui/react';
+import { FRAME_SIZE, PORTRAIT } from 'src/constants';
 
-const IndexPage = () => {
-  const { t } = useTranslation();
-
-  return (
-    <PageLayout
-      title='Joe Sobrero Portfolio'
-      description='Showcase of product design and web development experience.'
+const IndexPage = () => (
+  <PageLayout
+    title='Joe Sobrero Portfolio'
+    description='Showcase of product design and web development experience.'
+  >
+    <VStack
+      m={FRAME_SIZE}
+      p={`calc(${FRAME_SIZE}*2)`}
+      align='start'
+      w='full'
+      h={`calc(100vh - ${FRAME_SIZE}*2)`}
+      spacing={24}
     >
-      <Stack
-        spacing={4}
-        py={12}
-        align='center'
-        h='100vh'
-        w='100%'
-        direction={{ base: 'column', md: 'row' }}
-      >
-        <VStack
-          spacing={2}
-          align='start'
-          w={{ base: '100%', md: '50%' }}
-          py={{ base: 20, md: 0 }}
-        >
-          <Heading as='h1'>WEBSITE UNDER CONSTRUCTION</Heading>
-          <Divider />
-          <Text color='gray.500' align='justify'>
-            Check back soon :)
-          </Text>
-        </VStack>
-      </Stack>
-    </PageLayout>
-  );
-};
+      <Intro />
+      <Education />
+      <Tools />
+    </VStack>
+    <Portrait />
+  </PageLayout>
+);
 
 export default IndexPage;
