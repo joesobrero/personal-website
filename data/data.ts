@@ -136,10 +136,10 @@ export const frameworksToolImages: ToolImage[] = [
 ];
 
 export const toolSections: ToolSection[] = [
-  { title: 'workflow', images: workflowToolImages },
-  { title: 'applications', images: applicationsToolImages },
   { title: 'frameworks', images: frameworksToolImages },
+  { title: 'applications', images: applicationsToolImages },
   { title: 'languages', images: languagesToolImages },
+  { title: 'workflow', images: workflowToolImages },
 ];
 
 export {};

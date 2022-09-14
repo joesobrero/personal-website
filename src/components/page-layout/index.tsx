@@ -3,27 +3,6 @@ import { motion, Variants } from 'framer-motion';
 import { NextSeo } from 'next-seo';
 import { ReactNode } from 'react';
 
-const variants: Variants = {
-  hidden: {
-    opacity: 0,
-    x: 0,
-    y: -40,
-    transition: { duration: 0.4, type: 'easeOut' },
-  },
-  enter: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: { duration: 0.4, type: 'easeOut' },
-  },
-  exit: {
-    opacity: 0,
-    x: -0,
-    y: 40,
-    transition: { duration: 0.4, type: 'easeOut' },
-  },
-};
-
 type PageProps = {
   title: string;
   description?: string;
@@ -70,10 +49,7 @@ const PageLayout = ({ title, description, children }: PageProps) => {
         minH='100vh'
         p={0}
         m={0}
-        initial='hidden'
-        animate='enter'
-        exit='exit'
-        variants={variants}
+        initial='false'
       >
         {children}
       </MotionContainer>

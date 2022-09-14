@@ -8,11 +8,11 @@ const IndexPage = () => (
   >
     <Stack
       spacing={4}
-      py={12}
+      p={12}
       align='center'
+      justify={'center'}
       h='100vh'
       w='100%'
-      direction={{ base: 'column', md: 'row' }}
     >
       <VStack
         spacing={2}

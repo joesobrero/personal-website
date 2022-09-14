@@ -11,11 +11,25 @@ import {
   Grid,
   GridItem,
 } from '@chakra-ui/react';
+import { motion, Variants } from 'framer-motion';
+import { FADE_IN_DURATION } from 'src/constants';
+
+const motionVariants: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: { duration: FADE_IN_DURATION, delay: 0.6 },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
 
 const toolSection = (section) => (
   <VStack key={section.title} align='start' spacing={4}>
     <Heading variant='caption'>{section.title}</Heading>
-    {/* <HStack maxW={`calc(105px + 4rem)`} wrap='wrap'> */}
     <Grid
       templateRows='repeat(3, 1fr)'
       templateColumns='repeat(3, 1fr)'
@@ -38,7 +52,16 @@ const toolSection = (section) => (
 );
 
 const Tools = () => (
-  <VStack align='start' w='full' zIndex={'docked'}>
+  <VStack
+    align='start'
+    w='full'
+    zIndex={'docked'}
+    as={motion.section}
+    initial='initial'
+    animate='animate'
+    exit='exit'
+    variants={motionVariants}
+  >
     <Heading mb={2} variant='heading'>
       Tools
     </Heading>

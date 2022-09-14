@@ -1,34 +1,46 @@
 import {
   VStack,
   Heading,
-  Text,
   useColorModeValue as mode,
   HStack,
 } from '@chakra-ui/react';
+import { motion, Variants } from 'framer-motion';
+import React from 'react';
+import { FADE_IN_DURATION } from 'src/constants';
+
+const motionVariants: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: { duration: FADE_IN_DURATION, delay: 0.2 },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
 
 const Intro = () => (
-  <HStack align='start'>
+  <HStack
+    align='start'
+    as={motion.section}
+    initial='initial'
+    animate='animate'
+    exit='exit'
+    variants={motionVariants}
+  >
     <VStack w='full' align='start'>
-      <Heading py={1} variant='title' as='h1' w='full'>
-        Product Strategist
+      <Heading py={1} variant='title' w='full' as='h1'>
+        Product Designer
       </Heading>
       <Heading py={1} variant='title' as='h1' w='full'>
-        Experience Designer
-      </Heading>
-      <Heading py={1} variant='title' as='h1' w='full'>
-        Web Developer
+        & Web Developer
       </Heading>
     </VStack>
-    <HStack
-      pl={4}
-      pt={4}
-      pr={8}
-      pb={16}
-      bgColor={mode('blackAlpha.100', 'whiteAlpha.100')}
-    >
-      <Text variant='mono'>(I design & build software startups)</Text>
-    </HStack>
   </HStack>
 );
+
+const MotionIntro = motion(Intro);
 
 export default Intro;

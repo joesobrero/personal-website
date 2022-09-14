@@ -2,7 +2,7 @@ export const textStyles = {
   title: {
     fontFamily: 'title',
     fontWeight: '200',
-    fontSize: 'xl',
+    fontSize: '2xl',
     letterSpacing: '2px',
     lineHeight: '100%',
     textDecoration: 'none',

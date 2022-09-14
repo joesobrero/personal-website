@@ -3,30 +3,25 @@ import { Divider, Heading, Stack, Text, VStack } from '@chakra-ui/react';
 
 const IndexPage = () => (
   <PageLayout
-    title='Joe Sobrero Portfolio'
-    description='Showcase of product design and web development experience.'
+    title='Design'
+    description='Joe Sobrero product design and web development projects.'
   >
-    <Stack
+    <VStack
       spacing={4}
-      py={12}
-      align='center'
       h='100vh'
       w='100%'
-      direction={{ base: 'column', md: 'row' }}
+      align={'center'}
+      justify='center'
+      p={12}
     >
-      <VStack
-        spacing={2}
-        align='start'
-        w={{ base: '100%', md: '50%' }}
-        py={{ base: 20, md: 0 }}
-      >
+      <VStack spacing={2} align='start' w={{ base: '100%', md: '50%' }}>
         <Heading as='h1'>WEBSITE UNDER CONSTRUCTION</Heading>
         <Divider />
         <Text color='gray.500' align='justify'>
           Check back soon :)
         </Text>
       </VStack>
-    </Stack>
+    </VStack>
   </PageLayout>
 );
 

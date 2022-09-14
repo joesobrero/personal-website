@@ -31,7 +31,9 @@ const buttons = [
 
 const Footer = () => (
   <HStack
-    position='absolute'
+    zIndex='tooltip'
+    bgColor='white'
+    position='fixed'
     bottom={0}
     left={`calc(${FRAME_SIZE} - 1px)`}
     w={`calc(100vw - (${FRAME_SIZE}*2) + 2px)`}

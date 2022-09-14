@@ -14,6 +14,8 @@ export const LOGO_IMG = {
 export const FRAME_SIZE = '3rem';
 
 export const PORTRAIT = {
-  src: getCloudImgPath('portrait_kqg3mu.png'),
+  src: getCloudImgPath('portrait_njeo1e.png'),
   alt: 'Joseph Sobrero black and white portrait',
 };
+
+export const FADE_IN_DURATION = 0.4;
