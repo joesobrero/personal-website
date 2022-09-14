@@ -36,7 +36,7 @@ const toolSection = (section) => (
       gap={4}
     >
       {section.images.map((image) => (
-        <GridItem>
+        <GridItem key={image.alt}>
           <Link href={image.href} target={'_blank'}>
             <Image
               _hover={{ opacity: 0.5 }}

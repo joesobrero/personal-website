@@ -36,8 +36,7 @@ const Education = () => (
       Education
     </Heading>
     <Divider />
-    {/* color={mode('#154734', '#BD8B13')}> */}
-    <Heading py={2} variant='subheading' color='#BD8B13'>
+    <Heading py={2} variant='subheading' color={mode('#154734', '#BD8B13')}>
       California Polytechnic State University - San Luis Obispo
     </Heading>
     <HStack spacing={6}>
