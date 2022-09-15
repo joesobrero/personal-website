@@ -3,7 +3,7 @@ export const styles = {
   global: (props) => ({
     'html, body': {
       w: '100vw',
-      bg: mode('white', '262626')(props),
+      bg: mode('white', 'gray.950')(props),
       color: mode('black', 'white')(props),
       overflowY: 'auto',
       overflowX: 'hidden',

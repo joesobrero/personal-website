@@ -32,7 +32,7 @@ const buttons = [
 const Footer = () => (
   <HStack
     zIndex='tooltip'
-    bgColor='white'
+    bgColor={mode('white', 'gray.950')}
     position='fixed'
     bottom={0}
     left={`calc(${FRAME_SIZE} - 1px)`}

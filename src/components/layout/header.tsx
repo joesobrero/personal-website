@@ -21,7 +21,7 @@ const buttons = ['design', 'art', 'photography', 'contact'];
 
 const Header = () => (
   <HStack
-    bgColor='white'
+    bgColor={mode('white', 'gray.950')}
     as='header'
     position='fixed'
     zIndex='tooltip'
@@ -53,6 +53,10 @@ const Header = () => (
             href={'/' + button}
             _hover={{
               bgColor: mode('blackAlpha.100', 'whiteAlpha.100'),
+              textDecoration: 'none',
+            }}
+            _active={{
+              bgColor: mode('blackAlpha.200', 'whiteAlpha.200'),
               textDecoration: 'none',
             }}
           >

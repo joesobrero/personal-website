@@ -1,33 +1,26 @@
 import PageLayout from '@/components/page-layout';
-import { Divider, Heading, Stack, Text, VStack } from '@chakra-ui/react';
+import { PHOTOGRAPHY, PhotographyImg } from '../data/photos';
+import { Grid } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import Photo from '@/components/photography/photo';
 
-const IndexPage = () => (
+const renderPhotos = () => {
+  let photos = [];
+  PHOTOGRAPHY.forEach((photo, index) => photos.push(Photo(photo, index)));
+  return photos;
+};
+
+const Photography = () => (
   <PageLayout
     title='Joe Sobrero Portfolio'
     description='Showcase of product design and web development experience.'
   >
-    <Stack
-      spacing={4}
-      p={12}
-      align='center'
-      justify={'center'}
-      h='100vh'
-      w='100%'
-    >
-      <VStack
-        spacing={2}
-        align='start'
-        w={{ base: '100%', md: '50%' }}
-        py={{ base: 20, md: 0 }}
-      >
-        <Heading as='h1'>WEBSITE UNDER CONSTRUCTION</Heading>
-        <Divider />
-        <Text color='gray.500' align='justify'>
-          Check back soon :)
-        </Text>
-      </VStack>
-    </Stack>
+    <Grid templateColumns='repeat(3, 1fr)' gap={6} p={24} w='100vw'>
+      {renderPhotos()}
+    </Grid>
   </PageLayout>
 );
 
-export default IndexPage;
+const MotionPhotography = motion(Photography);
+
+export default Photography;

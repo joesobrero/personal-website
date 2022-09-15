@@ -45,7 +45,7 @@ const PageLayout = ({ title, description, children }: PageProps) => {
       />
       <MotionContainer
         display='flex'
-        maxW='container.lg'
+        maxW='none'
         minH='100vh'
         p={0}
         m={0}
