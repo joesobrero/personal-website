@@ -51,10 +51,8 @@ const Header = () => {
             <Button
               key={button}
               sx={buttonStyles}
-              // as={Link}
               onClick={() => router.push('/' + button)}
               px={1}
-              // href={'/' + button}
               _hover={{
                 bgColor: mode('blackAlpha.100', 'whiteAlpha.100'),
                 textDecoration: 'none',
@@ -63,8 +61,15 @@ const Header = () => {
                 bgColor: mode('blackAlpha.200', 'whiteAlpha.200'),
                 textDecoration: 'none',
               }}
+              color={
+                router.pathname === '/' + button
+                  ? 'white'
+                  : mode('black', 'white')
+              }
               bgColor={
-                router.pathname === '/' + button ? 'brand.primary' : 'transparent'
+                router.pathname === '/' + button
+                  ? 'brand.primary'
+                  : 'transparent'
               }
             >
               {button}
