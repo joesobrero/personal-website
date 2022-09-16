@@ -23,7 +23,7 @@ const Portrait = () => (
     exit='exit'
     variants={motionVariants}
     position='fixed'
-    zIndex={'base'}
+    zIndex={'tooltip'}
     bottom={`calc(${FRAME_SIZE} - 1px)`}
     right={`calc(${FRAME_SIZE} - 1px)`}
     boxSize='450px'
