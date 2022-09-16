@@ -10,9 +10,9 @@ export const textStyles = {
   },
   subtitle: {
     fontFamily: 'subtitle',
-    fontWeight: '400',
-    fontSize: 'md',
-    letterSpacing: '0',
+    fontWeight: '700',
+    fontSize: 'xl',
+    letterSpacing: '2px',
     lineHeight: '100%',
     textDecoration: 'none',
     textTransform: 'none',
