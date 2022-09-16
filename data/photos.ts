@@ -28,7 +28,7 @@ const TAHOE_BOULDERING_LAKE_VIEW: PhotographyImg = {
   alt: 'Bouldering rock climbing with lake view in Lake Tahoe, Calfornia',
 };
 const SURFING_WASHED_OUT: PhotographyImg = {
-  title: 'Surfer',
+  title: 'Washed Out',
   src: getPath('surfing-washed-out-waves-pismo-beach_ndnq7f.jpg'),
   location: 'Shell Beach, California',
   alt: 'Surfer walking on water in washed out wave in Shell Beach, California',
