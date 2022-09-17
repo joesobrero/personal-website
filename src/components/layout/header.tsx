@@ -7,7 +7,6 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
 import { FRAME_SIZE, LOGO_IMG } from 'src/constants';
 
 const buttonStyles = {
@@ -68,7 +67,7 @@ const Header = () => {
               }
               bgColor={
                 router.pathname === '/' + button
-                  ? 'brand.primary'
+                  ? 'brand.tertiary'
                   : 'transparent'
               }
             >

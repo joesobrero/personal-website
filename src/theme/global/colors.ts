@@ -2,6 +2,7 @@ export const colors = {
   brand: {
     primary: '#BF4417',
     secondary: '#D9D9D9',
+    tertiary: '#344966',
   },
   transparent: 'transparent',
   pinkAlpha: {

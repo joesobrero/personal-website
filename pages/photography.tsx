@@ -80,8 +80,8 @@ const renderPhotos = (setSelectedIndex: Function) => {
         onClick={() => setSelectedIndex(index)}
         cursor='zoom-in'
       >
-        <AspectRatio ratio={1.618} >
-          <Image src={photo.src} alt={photo.alt} rounded='sm'/>
+        <AspectRatio ratio={1.618}>
+          <Image src={photo.src} alt={photo.alt} rounded='sm' />
         </AspectRatio>
       </GridItem>
     )
