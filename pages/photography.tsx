@@ -25,6 +25,16 @@ const fullImageMotionVariants: Variants = {
   exit: {},
 };
 
+const fullImageStyles = {
+  position: 'fixed',
+  top: '3rem',
+  left: '3rem',
+  h: `calc(100vh - 6rem)`,
+  w: `calc(100vw - 6rem)`,
+  overflow: 'hidden',
+  cursor: 'zoom-out',
+};
+
 const motionVariants: Variants = {
   initial: {
     scale: 0.8,
@@ -36,11 +46,19 @@ const motionVariants: Variants = {
     transition: {
       duration: FADE_IN_DURATION * 2,
       delay: DELAY + 0.2 * index,
+      type: 'spring',
     },
   }),
   exit: {
     scale: 0.8,
     opacity: 0,
+  },
+  hover: {
+    boxShadow:
+      // '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      '0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+    scale: 1.005,
+    transition: { delay: 0, duration: 0.5 },
   },
 };
 
@@ -51,21 +69,19 @@ const renderPhotos = (setSelectedIndex: Function) => {
       <GridItem
         key={'photo' + index}
         layoutId={'photo' + index}
-        // animate
         as={motion.div}
         layout
         custom={index}
         initial='initial'
         animate='animate'
         exit='exit'
-        transition={{ type: 'spring' }}
+        whileHover='hover'
         variants={motionVariants}
-        // state
         onClick={() => setSelectedIndex(index)}
         cursor='zoom-in'
       >
-        <AspectRatio ratio={1.618}>
-          <Image src={photo.src} alt={photo.alt} />
+        <AspectRatio ratio={1.618} >
+          <Image src={photo.src} alt={photo.alt} rounded='sm'/>
         </AspectRatio>
       </GridItem>
     )
@@ -77,34 +93,25 @@ const renderFullImage = (selectedIndex: number, setSelectedIndex: Function) => (
   <AnimatePresence>
     {typeof selectedIndex == 'number' && (
       <VStack
-        key={'photo' + selectedIndex}
-        layoutId={'photo' + selectedIndex}
-        // styles
-        as={motion.div}
-        position='fixed'
-        top='3rem'
-        left='3rem'
-        h={`calc(100vh - 6rem)`}
-        w={`calc(100vw - 6rem)`}
-        justify={'center'}
-        overflow='hidden'
-        align='start'
-        //
         layout
+        layoutId={'photo' + selectedIndex}
+        key={'photo' + selectedIndex}
+        as={motion.div}
         transition={{ type: 'spring' }}
         variants={fullImageMotionVariants}
+        align='start'
         initial='initial'
         animate='animate'
         exit='exit'
         onClick={() => setSelectedIndex(null)}
-        cursor='zoom-out'
+        sx={fullImageStyles}
       >
         <Image
-          fit={'cover'}
+          fit='cover'
           w='full'
           h='full'
           as={motion.img}
-          zIndex={'popover'}
+          zIndex='popover'
           src={PHOTOGRAPHY[selectedIndex].src}
           alt={PHOTOGRAPHY[selectedIndex].alt}
         />
@@ -113,7 +120,7 @@ const renderFullImage = (selectedIndex: number, setSelectedIndex: Function) => (
           position='absolute'
           bottom={-2}
           zIndex={9999}
-          color={'white'}
+          color='white'
           align='start'
           p={12}
           opacity={0.5}

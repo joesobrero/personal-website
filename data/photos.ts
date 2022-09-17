@@ -97,7 +97,7 @@ const MOONRISE: PhotographyImg = {
   src: getPath('moonrise_qgarjz.jpg'),
   title: 'Moonrise',
   alt: 'moonrise',
-  location: '',
+  location: 'Pismo Beach, Calfornia',
 };
 const JT_TWILIGHT: PhotographyImg = {
   src: getPath('joshua-tree-twighlight_l9bdgf.jpg'),
