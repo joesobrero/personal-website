@@ -63,7 +63,7 @@ const Tools = () => (
     variants={motionVariants}
   >
     <Heading mb={2} variant='heading'>
-      Tools
+      Favorite Tools
     </Heading>
     <Divider />
     <HStack pt={2} spacing={8} align='start'>

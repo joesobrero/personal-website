@@ -1,28 +1,26 @@
 import PageLayout from '@/components/page-layout';
-import { Divider, Heading, Stack, Text, VStack } from '@chakra-ui/react';
+import { Grid } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import ProjectCover from '@/components/design/project-covers';
+import ProjectDetail from '@/components/design/project-detail';
 
-const IndexPage = () => (
-  <PageLayout
-    title='Design'
-    description='Joe Sobrero product design and web development projects.'
-  >
-    <VStack
-      spacing={4}
-      h='100vh'
-      w='100%'
-      align={'center'}
-      justify='center'
-      p={12}
+const Design = () => {
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  return (
+    <PageLayout
+      title='Design'
+      description='Showcase of product design and web development experience.'
     >
-      <VStack spacing={2} align='start' w={{ base: '100%', md: '50%' }}>
-        <Heading as='h1'>WEBSITE UNDER CONSTRUCTION</Heading>
-        <Divider />
-        <Text color='gray.500' align='justify'>
-          Check back soon :)
-        </Text>
-      </VStack>
-    </VStack>
-  </PageLayout>
-);
+      <Grid templateColumns='repeat(3, 1fr)' gap={6} p={24} w='100vw'>
+        {ProjectCover(setSelectedIndex)}
+      </Grid>
+      {console.log(selectedIndex)}
+      {ProjectDetail(selectedIndex, setSelectedIndex)}
+    </PageLayout>
+  );
+};
 
-export default IndexPage;
+const MotionDesign = motion(Design);
+
+export default Design;
