@@ -9,6 +9,8 @@ import {
   Button,
   Link,
   Badge,
+  AspectRatio,
+  Divider,
 } from '@chakra-ui/react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import { BsArrowUpRight, BsArrowUpRightSquare } from 'react-icons/bs';
@@ -32,14 +34,16 @@ const fullWidthContainer = {
 };
 
 const CoverImage = (index: number) => (
-  <Image
-    fit='contain'
-    as={motion.img}
-    zIndex='popover'
-    src={PROJECTS[index].cover.src}
-    alt={PROJECTS[index].cover.alt}
-    fallback={<Skeleton />}
-  />
+  <AspectRatio ratio={4} w='full'>
+    <Image
+      fit='contain'
+      as={motion.img}
+      zIndex='popover'
+      src={PROJECTS[index].cover.src}
+      alt={PROJECTS[index].cover.alt}
+      fallback={<Skeleton />}
+    />
+  </AspectRatio>
 );
 
 const Description = (index: number) => (
@@ -47,25 +51,25 @@ const Description = (index: number) => (
     <Heading as={motion.h3} variant='subtitle'>
       {PROJECTS[index].name}
     </Heading>
-    <VStack spacing={3} w='full' align='start'>
+    <VStack spacing={4} w='full' align='start'>
       <Heading as={motion.h4} variant='subheading'>
         {PROJECTS[index].summary}
       </Heading>
-      <Text as={motion.p} variant='caption'>
-        Summary
-      </Text>
-    </VStack>
-    <VStack spacing={3} w='full' align='start'>
-      <HStack as={motion.div} wrap={'wrap'} spacing={4}>
+      <HStack as={motion.div} wrap={'wrap'} spacing={3}>
         {PROJECTS[index].skills.map((skill) => (
-          <Badge as={motion.span} variant={'solid'}>
+          <Badge
+            ml={0}
+            // mr={4}
+            as={motion.span}
+            sx={{ marginInlineStart: '0 !important' }}
+            mr={'2 !important'}
+            mb={'2 !important'}
+            variant={'outline'}
+          >
             {skill}
           </Badge>
         ))}
       </HStack>
-      <Text as={motion.p} variant='caption'>
-        Skills
-      </Text>
     </VStack>
   </VStack>
 );
@@ -74,9 +78,28 @@ const WorkSamples = (index: number) => (
   <VStack spacing={32} pt={24}>
     {PROJECTS[index].images.map((sample) => (
       <VStack align={'start'}>
-        <Heading>{sample.title}</Heading>
-        <Image src={sample.src} alt={sample.alt} fallback={<Skeleton />} />
-        <Text>{sample.caption}</Text>
+        <Heading variant='heading' color='black' mb={4}>
+          {sample.title}
+        </Heading>
+
+        {sample.title && <Divider />}
+
+        {sample.src.search('.mp4') != -1 ? (
+          // <AspectRatio ratio={2}>
+          <video loop autoPlay>
+            <source src={sample.src} type='video/mp4' />
+            {/* <source src="" type="video/ogg"> */}
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          // </AspectRatio>
+          <Image src={sample.src} alt={sample.alt} fallback={<Skeleton />} />
+        )}
+
+        <Text variant='caption' color='blackAlpha.500'>
+          {sample.caption}
+        </Text>
+
         {sample.link && (
           <Button
             as={Link}
@@ -84,6 +107,8 @@ const WorkSamples = (index: number) => (
             href={sample.link.href}
             size='sm'
             rightIcon={<BsArrowUpRightSquare />}
+            color='blue.500'
+            target='_blank'
           >
             {sample.link.label}
           </Button>
@@ -110,8 +135,8 @@ const ProjectDetail = (selectedIndex: number, setSelectedIndex: Function) => (
         sx={fullWidthContainer}
       >
         <VStack overflow='scroll' w='full'>
+          {CoverImage(selectedIndex)}
           <VStack maxW={'1000px'} w={'80vw'} pt={12} pb={24} spacing={12}>
-            {CoverImage(selectedIndex)}
             {Description(selectedIndex)}
             {WorkSamples(selectedIndex)}
           </VStack>

@@ -47,8 +47,8 @@ const ArtDetail = (selectedIndex: number, setSelectedIndex: Function) => (
           position='absolute'
           transform={'translateY(-50%)'}
           top={'50%'}
-          w='80%'
-          h='80%'
+          w='70%'
+          h='70%'
           fit='contain'
           as={motion.img}
           zIndex='popover'

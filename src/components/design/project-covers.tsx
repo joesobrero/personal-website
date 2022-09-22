@@ -47,6 +47,7 @@ const renderProjectCovers = (setSelectedIndex: Function) => {
         variants={motionVariants}
         onClick={() => setSelectedIndex(index)}
         cursor='zoom-in'
+        h={48}
       >
         <AspectRatio ratio={1.8}>
           <Image

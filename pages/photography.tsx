@@ -9,7 +9,17 @@ const Photography = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
   return (
     <PageLayout title='Photography' description='Showcase of photography'>
-      <Grid templateColumns='repeat(3, 1fr)' gap={6} p={24} w='100vw'>
+      <Grid
+        templateColumns={[
+          'repeat(1, 1fr)',
+          'repeat(2, 1fr)',
+          'repeat(2, 1fr)',
+          'repeat(3, 1fr)',
+        ]}
+        gap={6}
+        p={24}
+        w='100vw'
+      >
         {PhotoCovers(setSelectedIndex)}
       </Grid>
       {PhotoDetail(selectedIndex, setSelectedIndex)}

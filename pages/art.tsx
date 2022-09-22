@@ -12,7 +12,17 @@ const Art = () => {
       title='Joe Sobrero Portfolio'
       description='Showcase of product design and web development experience.'
     >
-      <Grid templateColumns='repeat(3, 1fr)' gap={6} p={24} w='100vw'>
+      <Grid
+        templateColumns={[
+          'repeat(1, 1fr)',
+          'repeat(2, 1fr)',
+          'repeat(2, 1fr)',
+          'repeat(3, 1fr)',
+        ]}
+        gap={6}
+        p={24}
+        w='100vw'
+      >
         {ArtCovers(setSelectedIndex)}
       </Grid>
       {console.log(selectedIndex)}
