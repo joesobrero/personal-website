@@ -77,7 +77,7 @@ const Description = (index: number) => (
 const WorkSamples = (index: number) => (
   <VStack spacing={32} pt={24}>
     {PROJECTS[index].images.map((sample) => (
-      <VStack align={'start'}>
+      <VStack align={'start'} key={sample.src.slice(15)}>
         <Heading variant='heading' color='black' mb={4}>
           {sample.title}
         </Heading>
