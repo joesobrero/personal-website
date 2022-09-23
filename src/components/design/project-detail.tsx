@@ -65,6 +65,7 @@ const Description = (index: number) => (
             mr={'2 !important'}
             mb={'2 !important'}
             variant={'outline'}
+            key={skill}
           >
             {skill}
           </Badge>
