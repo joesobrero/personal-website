@@ -13,7 +13,7 @@ import {
   Divider,
 } from '@chakra-ui/react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { BsArrowUpRight, BsArrowUpRightSquare } from 'react-icons/bs';
+import { BsArrowUpRightSquare } from 'react-icons/bs';
 
 const containerMotionVariants: Variants = {
   initial: {},
@@ -86,14 +86,12 @@ const WorkSamples = (index: number) => (
         {sample.title && <Divider />}
 
         {sample.src.search('.mp4') != -1 ? (
-          // <AspectRatio ratio={2}>
           <video loop autoPlay>
             <source src={sample.src} type='video/mp4' />
             {/* <source src="" type="video/ogg"> */}
             Your browser does not support the video tag.
           </video>
         ) : (
-          // </AspectRatio>
           <Image src={sample.src} alt={sample.alt} fallback={<Skeleton />} />
         )}
 

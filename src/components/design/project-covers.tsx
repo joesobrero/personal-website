@@ -49,7 +49,7 @@ const renderProjectCovers = (setSelectedIndex: Function) => {
         cursor='zoom-in'
         h={48}
       >
-        <AspectRatio ratio={1.8}>
+        <AspectRatio ratio={1.9}>
           <Image
             src={project.cover.src}
             alt={project.cover.alt}

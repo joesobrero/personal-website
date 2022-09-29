@@ -127,7 +127,50 @@ const Ropegun: Project = {
   ],
 };
 
-const Resource: Project = {
+const ReSourceBizDeck: WorkImg = {
+  title: null,
+  src: getWorkPath('resource/biz-deck_s81dyp'),
+  alt: 'ReSource business member pitch deck design',
+  caption: 'Pitch deck for new SMBs to join the network',
+};
+const ReSourceDeck: WorkImg = {
+  title: 'Decks',
+  src: getWorkPath('resource/deck_suyh5h'),
+  alt: 'ReSource investor pitch deck design',
+  caption: 'Investor pitch deck',
+};
+const ReSourceDesignSystem: WorkImg = {
+  title: 'Design System',
+  src: getWorkPath('resource/design-system-widgets_xgbllf'),
+  caption: 'design system widgets and typography',
+  alt: 'resource design system widgets and typography',
+};
+const ReSourceDesignSystemUI: WorkImg = {
+  title: null,
+  src: getWorkPath('resource/design-system-ui_oojlyo'),
+  caption: 'design system ui elements',
+  alt: 'resource design system ui elements',
+};
+const ReSourceStakingDapp: WorkImg = {
+  title: 'Staking dApp',
+  src: getWorkVideoPath('resource/stake-SOURCE-tutorial_tm7bdg.mp4'),
+  caption: 'SOURCE staking dapp design and how to video',
+  alt: 'ReSource SOURCE staking dapp how to video',
+};
+const ReSourceMarketplace: WorkImg = {
+  title: 'Mutual Credit Marketplace',
+  src: getWorkPath('resource/resource-marketplace_ttx3nm'),
+  caption: 'ReSource Marketplace for regenerative businesses',
+  alt: 'ReSource Marketplace web app designs',
+};
+const ReSourceLogos: WorkImg = {
+  title: 'Logos',
+  src: getWorkPath('resource/resource-logos_jkfzpg'),
+  caption: 'logos and token glyfs',
+  alt: 'ReSource logos',
+};
+
+const ReSource: Project = {
   name: 'ReSource',
   role: 'Lead Designer -> Head of Product',
   summary:
@@ -145,7 +188,15 @@ const Resource: Project = {
     src: getWorkPath('resource/cover_stiyfc.jpg'),
     alt: 'ReSource project samples cover',
   },
-  images: [],
+  images: [
+    ReSourceLogos,
+    ReSourceDeck,
+    ReSourceBizDeck,
+    ReSourceDesignSystem,
+    ReSourceDesignSystemUI,
+    ReSourceStakingDapp,
+    ReSourceMarketplace,
+  ],
 };
 
 const BractWebsite: WorkImg = {
@@ -316,7 +367,7 @@ const GrowNodes: Project = {
     "Won first place and crowd favorite at Cal Poly's 2016 Startup Weekend. I was the only designer on the team.",
   skills: ['UX/UI Design', 'Prototyping', 'Pitch Deck Design'],
   cover: {
-    src: getWorkPath('grow-nodes/cover_uytiq7.jpg'),
+    src: getWorkPath('grow-nodes/cover_ku1d7t'),
     alt: 'Grow Nodes project samples cover',
   },
   images: [
@@ -328,4 +379,104 @@ const GrowNodes: Project = {
   ],
 };
 
-export const PROJECTS: Project[] = [Ropegun, Resource, Bract, GrowNodes];
+const NuMundoDeck: WorkImg = {
+  title: 'Investor Deck',
+  alt: 'NuMundo investor deck design',
+  src: getWorkPath('numundo/numundo-deck_ib1uof'),
+  caption: 'investor deck',
+};
+
+const NuMundo: Project = {
+  name: 'NuMundo',
+  role: 'Designer',
+  summary: '',
+  skills: [],
+  cover: {
+    src: getWorkPath('numundo/cover_duhnnm'),
+    alt: 'NuMundo project samples cover',
+  },
+  images: [NuMundoDeck],
+};
+
+const RoopairsFirst: WorkImg = {
+  title: 'Website',
+  alt: 'rooparis website draft',
+  caption: 'first draft',
+  src: getWorkPath('roopairs/v1_ctsudr'),
+};
+
+const RoopairsSecond: WorkImg = {
+  title: null,
+  alt: 'rooparis website draft',
+  caption: 'second draft',
+  src: getWorkPath('roopairs/v2_xrwhgp'),
+};
+
+const RoopairsThird: WorkImg = {
+  title: null,
+  alt: 'rooparis website draft',
+  caption: 'third draft',
+  src: getWorkPath('roopairs/v3_uh46iu'),
+};
+
+const RoopairsFourth: WorkImg = {
+  title: null,
+  alt: 'rooparis website draft',
+  caption: 'fourth draft',
+  src: getWorkPath('roopairs/v4_cjsg5l'),
+};
+const RoopairsFinal: WorkImg = {
+  title: null,
+  alt: 'rooparis website draft',
+  caption: 'final draft website (designed and developed)',
+  src: getWorkPath('roopairs/final_q5mv08'),
+};
+const Roopairs: Project = {
+  name: 'Rooparis',
+  role: 'project lead',
+  summary: '',
+  skills: [],
+  cover: {
+    src: getWorkPath('roopairs/cover_shffpc'),
+    alt: 'roopairs project sample cover',
+  },
+  images: [
+    RoopairsFirst,
+    RoopairsSecond,
+    RoopairsThird,
+    RoopairsFourth,
+    RoopairsFinal,
+  ],
+};
+
+const CPRacingPdf: WorkImg = {
+  title: 'Partnership Packet',
+  src: getWorkPath('cpracing/cpracing-packet_qskbyf'),
+  caption: 'benefacor partnership packet for cal poly racing slo',
+  alt: 'benefacor partnership packet design for cal poly racing slo',
+  link: {
+    label: 'Download the PDF',
+    href: getWorkPath('cpracing/partnership-packet_mxi9qa.pdf'),
+  },
+};
+const CPRacing: Project = {
+  name: 'Cal Poly Racing',
+  role: 'lead designer, photographer',
+  summary: '',
+  skills: [],
+  cover: {
+    src: getWorkPath('cpracing/cover_uyusmq'),
+    alt: 'cal poly racing',
+  },
+  images: [CPRacingPdf],
+};
+
+export const PROJECTS: Project[] = [
+  Ropegun,
+  ReSource,
+  Bract,
+  GrowNodes,
+  NuMundo,
+  Roopairs,
+  CPRacing,
+];
