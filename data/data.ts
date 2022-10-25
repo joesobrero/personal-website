@@ -39,6 +39,12 @@ export const applicationsToolImages: ToolImage[] = [
     href: 'https://code.visualstudio.com',
   },
   {
+    lightModeSrc: getLogoPath('framer_jaketx'),
+    darkModeSrc: getLogoPath('framer-w_d9l4ot'),
+    alt: 'Framer Logo',
+    href: 'https://www.framer.com',
+  },
+  {
     lightModeSrc: getLogoPath('webflow_ywmtdm'),
     darkModeSrc: getLogoPath('webflow_ywmtdm'),
     alt: 'Webflow logo',

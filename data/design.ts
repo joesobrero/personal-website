@@ -116,8 +116,8 @@ const Ropegun: Project = {
   images: [
     RopegunPhoneShots,
     RopegunVideo,
-    RopegunLogo,
-    RopegunInverseLogo,
+    // RopegunLogo,
+    // RopegunInverseLogo,
     RopegunLogoType,
     RopegunStickers,
     RopegunBusinessCards,
@@ -472,11 +472,11 @@ const CPRacing: Project = {
 };
 
 export const PROJECTS: Project[] = [
-  Ropegun,
   ReSource,
-  Bract,
-  GrowNodes,
   NuMundo,
+  Ropegun,
+  Bract,
   Roopairs,
+  GrowNodes,
   CPRacing,
 ];

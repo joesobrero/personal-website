@@ -20,7 +20,7 @@ const motionVariants: Variants = {
     },
   }),
   exit: {
-    scale: 0.8,
+    scale: 1,
     opacity: 0,
   },
   hover: {

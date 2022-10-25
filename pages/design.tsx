@@ -22,6 +22,7 @@ const Design = () => {
         gap={6}
         p={24}
         w='100vw'
+        h='intrinsic'
       >
         {ProjectCover(setSelectedIndex)}
       </Grid>

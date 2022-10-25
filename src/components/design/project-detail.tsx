@@ -59,7 +59,6 @@ const Description = (index: number) => (
         {PROJECTS[index].skills.map((skill) => (
           <Badge
             ml={0}
-            // mr={4}
             as={motion.span}
             sx={{ marginInlineStart: '0 !important' }}
             mr={'2 !important'}

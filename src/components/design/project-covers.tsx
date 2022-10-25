@@ -20,6 +20,7 @@ const motionVariants: Variants = {
     },
   }),
   exit: {
+    scale: 1,
     opacity: 0,
   },
   hover: {
@@ -47,7 +48,7 @@ const renderProjectCovers = (setSelectedIndex: Function) => {
         variants={motionVariants}
         onClick={() => setSelectedIndex(index)}
         cursor='zoom-in'
-        h={48}
+        h='intrinsic'
       >
         <AspectRatio ratio={1.9}>
           <Image
