@@ -1,10 +1,55 @@
-import Education from '@/components/home/education';
-import Intro from '@/components/home/intro';
-import Portrait from '@/components/home/portrait';
-import Tools from '@/components/home/tools';
 import PageLayout from '@/components/page-layout';
-import { VStack, useColorModeValue as mode, HStack } from '@chakra-ui/react';
+import {
+  Link,
+  VStack,
+  useColorModeValue as mode,
+  HStack,
+  Button,
+  Stack,
+  ButtonGroup,
+} from '@chakra-ui/react';
+import { animate, motion, useMotionValue, Variants } from 'framer-motion';
 import { FRAME_SIZE } from 'src/constants';
+import BlocImages from '@/components/index/bloc-images';
+import BlocRotation from '@/components/index/bloc-ratation';
+
+const menuItemsMotion: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: [0, 1],
+    transition: { delay: 0, duration: 2 },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
+const Menu = () => (
+  <ButtonGroup
+    as={motion.div}
+    initial='initial'
+    animate='animate'
+    exit='exit'
+    variants={menuItemsMotion}
+    spacing={[0, 0, 4]}
+    size={['lg', 'lg', 'md']}
+    display='flex'
+    flexDirection={['column', 'column', 'row']}
+    variant={['solid', 'solid', 'link']}
+  >
+    <Button as={Link} href='/design' mb={[2, 2, 0]}>
+      Design
+    </Button>
+    <Button as={Link} href='/art' mb={[2, 2, 0]}>
+      Art
+    </Button>
+    <Button as={Link} href='/photography' mb={[2, 2, 0]}>
+      Photography
+    </Button>
+  </ButtonGroup>
+);
 
 const IndexPage = () => (
   <PageLayout
@@ -16,14 +61,12 @@ const IndexPage = () => (
       p={`calc(${FRAME_SIZE}*2)`}
       w='full'
       h={`calc(100vh - ${FRAME_SIZE}*2)`}
+      justify='center'
     >
-      <VStack align='start' spacing={24}>
-        <Intro />
-        <Education />
-        <Tools />
-      </VStack>
+      {/* <BlocImages /> */}
+      <BlocRotation />
+      {Menu()}
     </VStack>
-    <Portrait />
   </PageLayout>
 );
 

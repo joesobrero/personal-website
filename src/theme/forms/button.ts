@@ -12,26 +12,26 @@ export const Button = {
     xl: {
       h: 'auto',
       fontWeight: 500,
-      fontSize: ['md', null, 'lg', null, 'xl', null],
+      fontSize: 'xl',
       px: 5,
       py: 4,
       minH: 16,
       minW: 16,
-      borderRadius: 'xl',
+      borderRadius: 'sm',
     },
     lg: {
       h: 'auto',
-      fontSize: ['sm', null, 'md', null, 'lg', null],
+      fontSize: 'lg',
       fontWeight: 500,
       px: 4,
       py: 3,
-      minH: [8, null, 10, null, 12],
-      minW: [8, null, 10, null, 12],
-      borderRadius: 'lg',
+      minH: 12,
+      minW: 12,
+      borderRadius: 'sm',
     },
     md: {
       h: 'auto',
-      fontSize: ['xs', null, 'sm', null, 'md', null],
+      fontSize: 'md',
       fontWeight: 500,
       letterSpacing: 'wide',
       px: 3.5,
@@ -42,7 +42,7 @@ export const Button = {
     },
     sm: {
       h: 'auto',
-      fontSize: ['xs', null, null, null, 'sm', null],
+      fontSize: 'sm',
       fontWeight: 600,
       letterSpacing: 'wide',
       px: 2.5,
@@ -55,21 +55,21 @@ export const Button = {
 
   variants: {
     solid: (props) => ({
-      color: mode('white', 'black'),
+      color: mode('black', 'white'),
       transition: '0.28s',
-      bg: mode('purple.600', 'purple.300'),
+      bg: 'purpleAlpha.300',
       _hover: {
-        bg: mode('purple.500', 'purple.400'),
+        bg: 'purpleAlpha.100',
         boxShadow: mode('xs', 'xs-dark'),
         textDecoration: 'none',
       },
       _focus: {
-        bg: mode('purple.500', 'purple.400'),
+        bg: 'transparent',
         boxShadow: 'none',
       },
       _active: {
         transition: '0s',
-        bg: 'purple.500',
+        bg: 'transparent',
         boxShadow: mode('inner', 'inner-dark'),
       },
     }),
@@ -146,7 +146,7 @@ export const Button = {
     }),
 
     link: (props) => ({
-      color: 'purple.500',
+      color: 'primary',
       transition: transition,
       textDecoration: 'none',
       _hover: {

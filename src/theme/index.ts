@@ -11,6 +11,7 @@ import {
   letterSpacings,
   lineHeights,
 } from './global/fonts';
+import { Button } from './forms/button';
 
 const config = {
   initialColorMode: 'light',
@@ -20,6 +21,7 @@ const config = {
 const components = {
   Text,
   Heading,
+  Button,
 };
 
 const theme = extendTheme({
