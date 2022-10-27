@@ -7,7 +7,7 @@ const getLogoPath = (srcName: string) =>
 export const workflowToolImages: ToolImage[] = [
   {
     lightModeSrc: getLogoPath('notion_k2npvj'),
-    darkModeSrc: getLogoPath('other-logos/notion_k2npvj'),
+    darkModeSrc: getLogoPath('notion-w_u4wrgx'),
     alt: 'Notion logo',
     href: 'https://notion.so',
   },

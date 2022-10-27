@@ -1,9 +1,10 @@
+import Contact from '@/components/home/contact';
 import Education from '@/components/home/education';
 import Intro from '@/components/home/intro';
 import Portrait from '@/components/home/portrait';
 import Tools from '@/components/home/tools';
 import PageLayout from '@/components/page-layout';
-import { VStack, useColorModeValue as mode, HStack } from '@chakra-ui/react';
+import { VStack, useColorModeValue as mode } from '@chakra-ui/react';
 import { FRAME_SIZE } from 'src/constants';
 
 const IndexPage = () => (
@@ -21,6 +22,7 @@ const IndexPage = () => (
         <Intro />
         <Education />
         <Tools />
+        <Contact />
       </VStack>
     </VStack>
     <Portrait />

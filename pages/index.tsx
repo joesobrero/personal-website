@@ -135,7 +135,7 @@ const IndexPage = () => {
           animate='animate'
           exit='exit'
           position='absolute'
-          bgColor='whiteAlpha.700'
+          bgColor={mode('whiteAlpha.700', 'blackAlpha.700')}
           w='full'
           h='full'
         />
