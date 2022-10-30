@@ -13,8 +13,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <LeftPanel />
       <Box as='main'>{children}</Box>
+      <LeftPanel />
       <RightPanel />
       <Footer />
     </>
